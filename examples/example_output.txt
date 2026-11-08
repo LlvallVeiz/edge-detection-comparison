@@ -1,0 +1,16 @@
+=== edge-pixel counts (128x128 synthetic image) ===
+method           clean  noisy (sigma=10)
+sobel              840               848
+prewitt            928               936
+laplacian4         871              1227
+laplacian8        1153              1335
+canny              686               580
+
+=== step-edge localisation (scan row 36, true boundary at column 15.5) ===
+sobel         peak |Gx| at column 15  (error 0.5 px)
+prewitt       peak |Gx| at column 15  (error 0.5 px)
+canny         edge columns on scan row: [15, 16]  (error 0.5 px)
+
+canny thresholds used: low 25.9, high 77.6 (0.05 / 0.15 x post-NMS max)
+
+wrote input.png, input_noisy.png, edges_sobel.png, edges_prewitt.png, edges_laplacian.png, edges_canny.png, comparison.png
